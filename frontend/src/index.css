@@ -1,0 +1,135 @@
+@import '@fontsource/bungee/400.css';
+@import '@fontsource/work-sans/400.css';
+@import '@fontsource/work-sans/500.css';
+@import '@fontsource/work-sans/600.css';
+@import '@fontsource/work-sans/700.css';
+
+/*
+ * Letrero de lata rotulado: esmalte crema de fondo, rojo de rótulo para el letrero y la acción,
+ * amarillo solo como sombra de letra y círculo de precio, azul de lata para lo secundario.
+ * Las letras de rotulista (Bungee) van solo en el letrero del día, precios y títulos de sección.
+ */
+:root {
+  color-scheme: light;
+
+  --esmalte: #f6ebd3;
+  --lata: #fffaf0;
+  --lata-oscura: #eadcbc;
+  --blanco: #fffdf7;
+  --tinta: #1a1a1a;
+  --tinta-suave: #4b4438;
+  --tinta-tenue: #6b6252;
+  --linea: #dccdaa;
+  --linea-fuerte: #1a1a1a;
+
+  --rojo: #c8102e;
+  --rojo-oscuro: #9a0c23;
+  --amarillo: #f2b705;
+  --amarillo-oscuro: #9c7400;
+  --azul: #14406b;
+  --verde: #2e7d32;
+
+  --ok: #2e7d32;
+  --ok-fondo: #e2f0e1;
+  --alerta: #a35a00;
+  --alerta-fondo: #fbecd2;
+  --peligro: #b3261e;
+  --peligro-fondo: #fbe5e2;
+
+  --texto: 'Work Sans', system-ui, sans-serif;
+  --rotulo: 'Bungee', 'Work Sans', sans-serif;
+
+  --radio: 4px;
+  --radio-control: 4px;
+  --alto-control: 42px;
+  --margen: 18px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--esmalte);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--amarillo);
+  color: var(--tinta);
+}
+
+:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+input,
+textarea {
+  caret-color: var(--rojo);
+}
+
+.num {
+  white-space: nowrap;
+}
+
+/* Letras de rotulista: precio, número de pedido o mesa, título de sección. */
+.rotulo {
+  font-family: var(--rotulo);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+/* La sombra desplazada del rotulista: la única sombra del mundo. */
+.rotulo-sombra {
+  text-shadow: 3px 3px 0 var(--amarillo);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

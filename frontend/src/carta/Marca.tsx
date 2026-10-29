@@ -1,0 +1,15 @@
+/** Marca de La Sazón de Doña Meche: una lata roja rotulada, con remaches y el círculo amarillo del precio. */
+export function Marca({ tam = 36 }: { tam?: number }) {
+  return (
+    <svg width={tam} height={tam} viewBox="0 0 32 32" aria-hidden="true" className="marca">
+      <rect x="1" y="4" width="30" height="24" rx="3" fill="#C8102E" />
+      <rect x="4" y="7" width="24" height="18" rx="1.5" fill="none" stroke="#F6EBD3" strokeWidth="1.6" />
+      <circle cx="20" cy="16" r="5.5" fill="#F2B705" />
+      <path d="M8 13h6M8 18h5" stroke="#F6EBD3" strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="3.5" cy="6.5" r="1" fill="#F6EBD3" />
+      <circle cx="28.5" cy="6.5" r="1" fill="#F6EBD3" />
+      <circle cx="3.5" cy="25.5" r="1" fill="#F6EBD3" />
+      <circle cx="28.5" cy="25.5" r="1" fill="#F6EBD3" />
+    </svg>
+  )
+}

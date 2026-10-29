@@ -1,0 +1,17 @@
+# Backend
+backend/target/
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Notas internas de herramientas (solo en local)
+.taste-skill/
+.impeccable/
+.idea/
+.vscode/
+
+# Fotos originales descargadas (las publicadas están en frontend/public/platos)
+fotos/
